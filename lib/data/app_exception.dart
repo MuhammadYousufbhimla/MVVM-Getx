@@ -15,7 +15,7 @@ AppException([this._message,this._prefix]){
 }
 class InternetException extends AppException{
   InternetException([String ? message]):super
-  (message,'No Internet');
+  (message,'No Internet No Internet');
 
   
 }

@@ -16,9 +16,9 @@ class _splashscreenState extends State<splashscreen> {
       body: Container(
         child: Column(),
       ),
-      floatingActionButton: FloatingActionButton(onPressed: (){
+      floatingActionButton: FloatingActionButton(onPressed: () async*{
         print("object");
-        throw  InternetException('Error');
+        throw  InternetException();
       }),
     );
   }
