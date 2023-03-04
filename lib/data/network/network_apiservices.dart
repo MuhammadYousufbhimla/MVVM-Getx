@@ -9,9 +9,8 @@ import 'package:http/http.dart' as http;
 class networkservices extends BaseApi {
   @override
   Future<dynamic> getapi(String url) async {
-    if(kDebugMode){
+    if (kDebugMode) {
       print(url);
-      
     }
     dynamic responsejson;
     try {
@@ -27,9 +26,8 @@ class networkservices extends BaseApi {
   }
 
   @override
-  Future postapi(var data, String url)async {
-   
-  if(kDebugMode){
+  Future postapi(var data, String url) async {
+    if (kDebugMode) {
       print(url);
       print(data);
     }
@@ -37,9 +35,10 @@ class networkservices extends BaseApi {
     try {
       final response =
           await http.post(Uri.parse(url)).timeout(const Duration(seconds: 100));
-        
+
       responsejson = returnResponse(response);
-      body:jsonDecode(data);
+      body:
+      jsonDecode(data);
     } on SocketException {
       throw InternetException();
     } on Requesttimout {
@@ -47,6 +46,7 @@ class networkservices extends BaseApi {
     }
     return responsejson;
   }
+}
 
 dynamic returnResponse(http.Response response) {
   switch (response.statusCode) {
@@ -58,5 +58,4 @@ dynamic returnResponse(http.Response response) {
   }
   defult:
   throw FetchException('FetchException' + response.statusCode.toString());
-}
 }
