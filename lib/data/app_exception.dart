@@ -29,6 +29,22 @@ class Requesttimout extends AppException{
 class Service extends AppException{
   Service([String ? message]):super
   (message,'Services Failed');
+ 
+   
+  
+}
 
+class InvalidUrl extends AppException{
+  InvalidUrl([String ? message]):super
+  (message,'InvalidUrl');
+ 
+   
+  
+}
+class FetchException extends AppException{
+  FetchException([String ? message]):super
+  (message,'FetchException');
+ 
+   
   
 }
