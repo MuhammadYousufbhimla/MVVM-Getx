@@ -1,4 +1,6 @@
-import 'package:mvvvmgetx/data/status.dart';
+
+
+import 'package:mvvvmgetx/data/response/status.dart';
 
 class ApiResponse<T>{
   Status? status;

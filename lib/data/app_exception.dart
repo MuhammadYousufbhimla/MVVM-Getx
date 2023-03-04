@@ -19,3 +19,16 @@ class InternetException extends AppException{
 
   
 }
+
+class Requesttimout extends AppException{
+  Requesttimout([String ? message]):super
+  (message,'Timeout');
+
+  
+}
+class Service extends AppException{
+  Service([String ? message]):super
+  (message,'Services Failed');
+
+  
+}
