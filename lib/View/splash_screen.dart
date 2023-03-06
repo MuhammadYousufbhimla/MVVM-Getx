@@ -13,14 +13,16 @@ class _splashscreenState extends State<splashscreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text("Splash screen"),),
+      appBar: AppBar(
+        title: Text("Splash screen"),
+      ),
       body: Container(
         child: Column(),
       ),
       floatingActionButton: FloatingActionButton(onPressed: () {
         print("object");
-        Get.snackbar("waqa", "message");
-       Requesttimout('');
+
+        internetExceptions("Exception", "No Internet");
       }),
     );
   }

@@ -18,9 +18,9 @@ class networkservices extends BaseApi {
           await http.get(Uri.parse(url)).timeout(const Duration(seconds: 100));
       responsejson = returnResponse(response);
     } on SocketException {
-      throw InternetException();
-    } on Requesttimout {
-      throw Requesttimout();
+     internetExceptions("Exception ", "No Internet");
+    } on Socket {
+      Requesttimout("Failed", "Timeout");
     }
     return responsejson;
   }
@@ -40,9 +40,9 @@ class networkservices extends BaseApi {
       body:
       jsonDecode(data);
     } on SocketException {
-      throw InternetException();
-    } on Requesttimout {
-      throw Requesttimout();
+       internetExceptions("Exception ", "No Internet");
+    } on Socket {
+       Requesttimout("Failed", "Timeout");
     }
     return responsejson;
   }
@@ -54,9 +54,9 @@ dynamic returnResponse(http.Response response) {
       dynamic responsejson = jsonDecode(response.body);
       return responsejson;
     case 400:
-      throw InvalidUrl();
+      InvalidUrl("False", "Invalid url");
   }
   defult:
-  throw FetchException('FetchException' + response.statusCode.toString());
+   FetchException('FetchException',''+ response.statusCode.toString());
 }
  
