@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:get/get.dart';
-import 'package:mvvvmgetx/data/app_exception.dart';
 import 'package:mvvvmgetx/res/images_assets.dart';
-import 'package:mvvvmgetx/utlis/utils.dart';
+import '../data/app_exception.dart';
 
 class splashscreen extends StatefulWidget {
   const splashscreen({super.key});
@@ -22,8 +20,8 @@ class _splashscreenState extends State<splashscreen> {
       floatingActionButton: FloatingActionButton(onPressed: () {
         print("object");
 
-        // internetExceptions("Exception", "No Internet");
-            utils.toastmsg("Welcome");
+        internetExceptions("Exception", "No Internet");
+      
         
       }
       

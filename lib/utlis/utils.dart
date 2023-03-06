@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:fluttertoast/fluttertoast.dart';
-import 'package:mvvvmgetx/assets/color.dart';
+
+import 'package:mvvvmgetx/assetss/color.dart';
 
 class utils{
   static void fieldfocuschange(BuildContext context,FocusNode current ,FocusNode nextfocus){
@@ -9,7 +10,7 @@ class utils{
   }
 
   static toastmsg(String msg){
-    Fluttertoast.showToast(msg: msg,backgroundColor: appcolor.blackcolor);
+Fluttertoast.showToast(msg: msg,backgroundColor: appcolor.blackcolor);
   }
   
 }
