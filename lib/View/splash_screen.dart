@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:mvvvmgetx/data/app_exception.dart';
 
 class splashscreen extends StatefulWidget {
@@ -16,9 +17,10 @@ class _splashscreenState extends State<splashscreen> {
       body: Container(
         child: Column(),
       ),
-      floatingActionButton: FloatingActionButton(onPressed: () async*{
+      floatingActionButton: FloatingActionButton(onPressed: () {
         print("object");
-        throw  InternetException();
+        Get.snackbar("waqa", "message");
+       Requesttimout('');
       }),
     );
   }

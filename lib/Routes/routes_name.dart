@@ -1,4 +1,4 @@
 class Routename{
-  static const String splashscreen='/splashscreen';
-  static const String login='';
+  static const String splash_screen='/splashscreen';
+  // static const String login='';
 }

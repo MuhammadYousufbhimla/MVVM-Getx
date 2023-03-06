@@ -19,9 +19,7 @@ class MyApp extends StatelessWidget {
        
         primarySwatch: Colors.blue,
       ),
-       getPages: [
-        Approutes.approutes()
-      ],
+      
       home: splashscreen()
      
     );
