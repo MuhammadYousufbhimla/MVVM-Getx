@@ -17,13 +17,20 @@ class _splashscreenState extends State<splashscreen> {
         title: Text("Splash screen"),
       ),
       body: Container(
-        child: Column(),
+        child: Column(
+          children: [],
+        ),
       ),
       floatingActionButton: FloatingActionButton(onPressed: () {
         print("object");
 
         internetExceptions("Exception", "No Internet");
-      }),
+
+        
+      }
+      
+      ),
+    
     );
   }
 }
