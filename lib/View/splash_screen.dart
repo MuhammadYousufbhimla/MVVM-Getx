@@ -14,7 +14,7 @@ class _splashscreenState extends State<splashscreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Splash screennnnn"),
+        title: Text("Splash screen"),
       ),
       body:  Image(image: AssetImage(ImageAssets.splash)),
       floatingActionButton: FloatingActionButton(onPressed: () {
